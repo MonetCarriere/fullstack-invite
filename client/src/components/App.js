@@ -1,19 +1,25 @@
 import React from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import 'normalize.css/normalize.css'
 import '../styles/App.css'
 import { Provider } from 'react-redux'
 import store from '../store'
 
-import Button from './Button'
-import Greeting from './Greeting'
+import Invite from './Invite'
+import Going from './Going'
+import notGoing from './notGoing'
+
 
 export default props => {
   return (
+    <Router>
     <Provider store={store}>
       <div>
-        <Button />
-        <Greeting />
+        <Route exact path="/" component={Invite}></Route>
+        <Route path="/going" component={Going}></Route>
+        <Route path="/not-going" component={notGoing}></Route>
       </div>
     </Provider>
+    </Router>
   )
 }

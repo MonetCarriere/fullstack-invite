@@ -1,13 +1,34 @@
 const router = require('express').Router()
 
-/*
-  code here
-*/
+const users = {
+  going: [],
+  notgoing: []
+}
 
-router.get("/greeting", (req, res, next) => {
+const going = []
+const notgoing = []
+
+router.post('going', (req, res, next) => {
+  going.push(req.body)
+
+  res.json ({
+    message: 'user added to going list',
+    user: req.body
+  })
+
+  console.log(users)
+
+})
+
+router.post('/notgoing', (req, res, next) => {
+  going.push(req.body)
+
   res.json({
-    greeting: 'Hello World from Express and Node!'
+    message: 'user added not going to list',
+    user: req.body
   })
 })
+
+console.log(users)
 
 module.exports = router

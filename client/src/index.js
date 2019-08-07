@@ -1,11 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+const express = require ('express')
+const bodyParser = require ('body-parser')
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const routes = require('./routes')
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const app = express ()
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
+app.use("api"/routes) 
+
+/*Because you put ^api in front of routes. Now when you go to your
+postman, you have to put /api in front of localhost8000
+Like THIS: http://localhost8000/api
+/*
+
+/*  Put your routes and other code here! */
+
+app.listen(8000, () => {
+    console.log("Server Listening on port 8000")
+})

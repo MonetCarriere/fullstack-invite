@@ -1,7 +1,6 @@
 {
   "name": "fullstackinvite",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "client": "cd client && yarn start",
@@ -15,7 +14,8 @@
   },
   "homepage": "https://github.com/pc-summer-2019/boilerplate#readme",
   "dependencies": {
-    "concurrently": "^4.1.1"
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1"
   },
   "boilerplate": {
     "name": "boilerplate",
@@ -27,5 +27,11 @@
     },
     "author": "",
     "license": "ISC"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonetCarriere/fullstack-invite.git"
+  },
+  "description": ""
 }
