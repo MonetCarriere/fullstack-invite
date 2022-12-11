@@ -15,7 +15,7 @@
   "homepage": "https://github.com/pc-summer-2019/boilerplate#readme",
   "dependencies": {
     "concurrently": "^4.1.1",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "boilerplate": {
     "name": "boilerplate",
